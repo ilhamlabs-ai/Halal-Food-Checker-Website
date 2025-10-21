@@ -5,67 +5,223 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - Halal Food Checker</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    .section-card {
+      transition: all 0.3s ease;
+    }
+    .section-card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+    .back-link {
+      transition: all 0.3s ease;
+    }
+    .back-link:hover {
+      transform: translateX(-5px);
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <header class="bg-green-600 text-white p-6 shadow-md">
-    <h1 class="text-3xl font-bold">Privacy Policy</h1>
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 shadow-lg">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">🔒</span>
+        <h1 class="text-4xl font-bold">Privacy Policy</h1>
+      </div>
+      <p class="text-green-50 text-lg mt-2">Your privacy and data protection explained</p>
+    </div>
   </header>
 
-  <main class="max-w-3xl mx-auto py-10 px-6">
-    <p><strong>Last Updated:</strong> October 21, 2025</p>
+  <main class="max-w-4xl mx-auto py-12 px-6">
+    <!-- Last Updated Badge -->
+    <div class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-lg font-semibold mb-8 animate-fadeIn">
+      <span class="mr-2">📅</span>
+      <strong>Last Updated:</strong> October 21, 2025
+    </div>
 
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Introduction</h2>
-    <p>
-      Halal Food Checker (“we,” “our,” or “us”) respects your privacy. This policy explains how we handle your data and permissions used by the app.
-    </p>
+    <!-- Introduction -->
+    <section class="section-card bg-white rounded-2xl shadow-md p-8 mb-8 border border-gray-100 animate-fadeIn" style="animation-delay: 0.1s;">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-3xl">👋</span>
+        <h2 class="text-2xl font-bold text-gray-900">Introduction</h2>
+      </div>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        <strong>Halal Food Checker</strong> ("we," "our," or "us") deeply respects your privacy and is committed to protecting your personal information. 
+        This policy explains in detail how we handle your data, what permissions we use, and why your privacy is our top priority.
+      </p>
+    </section>
 
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Data Collection</h2>
-    <p>We do <strong>NOT</strong> collect, store, or share any personal information.</p>
+    <!-- Data Collection -->
+    <section class="section-card bg-white rounded-2xl shadow-md p-8 mb-8 border border-gray-100 animate-fadeIn" style="animation-delay: 0.2s;">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-3xl">📊</span>
+        <h2 class="text-2xl font-bold text-gray-900">Data Collection</h2>
+      </div>
+      <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg">
+        <p class="text-lg text-gray-800 font-semibold mb-2">
+          ✅ We do <strong class="text-green-700">NOT</strong> collect, store, or share any personal information.
+        </p>
+        <p class="text-gray-700">
+          Your data stays yours. We believe in complete transparency and user privacy above all else.
+        </p>
+      </div>
+    </section>
 
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Permissions Used</h2>
-    <ul class="list-disc ml-6">
-      <li><strong>Camera:</strong> To capture ingredient label photos.</li>
-      <li><strong>Storage:</strong> To select images from your gallery.</li>
-      <li><strong>Internet:</strong> To send images securely to our AI service for analysis.</li>
-    </ul>
+    <!-- Permissions Used -->
+    <section class="section-card bg-white rounded-2xl shadow-md p-8 mb-8 border border-gray-100 animate-fadeIn" style="animation-delay: 0.3s;">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-3xl">🔑</span>
+        <h2 class="text-2xl font-bold text-gray-900">Permissions Used</h2>
+      </div>
+      <p class="text-gray-700 mb-5">Our app requires certain permissions to function properly. Here's exactly what we use and why:</p>
+      
+      <div class="space-y-4">
+        <div class="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <div class="text-2xl">📷</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Camera Access</h3>
+            <p class="text-gray-600">To capture clear photos of ingredient labels for instant analysis.</p>
+          </div>
+        </div>
 
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Image Processing</h2>
-    <p>
-      Images are processed in real-time through Firebase Cloud Functions. No images are stored or retained after analysis. All data is transmitted securely via HTTPS.
-    </p>
+        <div class="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <div class="text-2xl">🖼️</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Storage Access</h3>
+            <p class="text-gray-600">To allow you to select existing images from your device's gallery.</p>
+          </div>
+        </div>
 
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Third-Party Services</h2>
-    <p>We use:</p>
-    <ul class="list-disc ml-6">
-      <li>Firebase (Google) – for secure cloud processing</li>
-      <li>Google Gemini AI – for ingredient recognition</li>
-    </ul>
-    <p>All third-party services comply with GDPR and other privacy standards.</p>
+        <div class="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <div class="text-2xl">🌐</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Internet Access</h3>
+            <p class="text-gray-600">To send images securely to our AI service for real-time ingredient analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Children’s Privacy</h2>
-    <p>
-      Our app does not knowingly collect any information from children under 13.
-    </p>
+    <!-- Image Processing -->
+    <section class="section-card bg-white rounded-2xl shadow-md p-8 mb-8 border border-gray-100 animate-fadeIn" style="animation-delay: 0.4s;">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-3xl">⚙️</span>
+        <h2 class="text-2xl font-bold text-gray-900">Image Processing</h2>
+      </div>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        Images you submit are processed in real-time through secure Firebase Cloud Functions using Google's infrastructure.
+      </p>
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-lg">
+        <p class="text-gray-800 font-semibold mb-2">🔐 Security Promise:</p>
+        <ul class="list-disc ml-5 space-y-1 text-gray-700">
+          <li>No images are stored or retained after analysis</li>
+          <li>All data is transmitted securely via HTTPS encryption</li>
+          <li>Processing happens instantly and ephemerally</li>
+          <li>Zero data persistence on our servers</li>
+        </ul>
+      </div>
+    </section>
 
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Changes to Policy</h2>
-    <p>
-      We may update this policy periodically. Updates will be posted on this page with the revised date.
-    </p>
+    <!-- Third-Party Services -->
+    <section class="section-card bg-white rounded-2xl shadow-md p-8 mb-8 border border-gray-100 animate-fadeIn" style="animation-delay: 0.5s;">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-3xl">🤝</span>
+        <h2 class="text-2xl font-bold text-gray-900">Third-Party Services</h2>
+      </div>
+      <p class="text-gray-700 mb-5">We integrate with trusted, industry-leading services to provide you with the best experience:</p>
+      
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-5 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-lg border border-orange-200">
+          <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+            <span>🔥</span> Firebase (Google)
+          </h3>
+          <p class="text-gray-700 text-sm">Secure cloud processing and backend infrastructure</p>
+        </div>
 
-    <h2 class="text-2xl font-semibold mt-6 mb-2">Contact</h2>
-    <p>
-      For questions or concerns about this policy, please contact us at:
-      <br />
-      <a href="mailto:ilhamlabs.ai@proton.me" class="text-green-700 font-semibold">ilhamlabs.ai@proton.me</a>
-    </p>
+        <div class="p-5 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+          <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+            <span>🤖</span> Google Gemini AI
+          </h3>
+          <p class="text-gray-700 text-sm">Advanced ingredient recognition and classification</p>
+        </div>
+      </div>
 
-    <div class="mt-10 text-center">
-      <a href="index.html" class="text-green-700 hover:underline">← Back to Home</a>
+      <div class="mt-5 p-4 bg-gray-50 rounded-lg border border-gray-200">
+        <p class="text-sm text-gray-600">
+          <strong>Note:</strong> All third-party services comply with GDPR, CCPA, and other international privacy standards.
+        </p>
+      </div>
+    </section>
+
+    <!-- Children's Privacy -->
+    <section class="section-card bg-white rounded-2xl shadow-md p-8 mb-8 border border-gray-100 animate-fadeIn" style="animation-delay: 0.6s;">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-3xl">👶</span>
+        <h2 class="text-2xl font-bold text-gray-900">Children's Privacy</h2>
+      </div>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Our app does not knowingly collect any information from children under the age of 13. 
+        If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.
+      </p>
+    </section>
+
+    <!-- Changes to Policy -->
+    <section class="section-card bg-white rounded-2xl shadow-md p-8 mb-8 border border-gray-100 animate-fadeIn" style="animation-delay: 0.7s;">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-3xl">🔄</span>
+        <h2 class="text-2xl font-bold text-gray-900">Changes to This Policy</h2>
+      </div>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We may update this privacy policy from time to time to reflect changes in our practices or for legal and regulatory reasons. 
+        All updates will be posted on this page with the revised "Last Updated" date at the top.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="section-card bg-gradient-to-r from-green-600 to-green-700 rounded-2xl shadow-lg p-8 mb-10 text-white animate-fadeIn" style="animation-delay: 0.8s;">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-3xl">📧</span>
+        <h2 class="text-2xl font-bold">Contact Us</h2>
+      </div>
+      <p class="text-lg text-green-50 mb-4 leading-relaxed">
+        Have questions or concerns about this privacy policy? We're here to help and happy to address any inquiries you may have.
+      </p>
+      <div class="bg-white bg-opacity-20 rounded-lg p-5 backdrop-blur-sm">
+        <p class="text-sm text-green-100 mb-2">Email us at:</p>
+        <a href="mailto:ilhamlabs.ai@proton.me" class="text-2xl font-bold text-white hover:text-green-100 transition-colors inline-flex items-center gap-2">
+          ilhamlabs.ai@proton.me
+          <span class="text-xl">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Back to Home -->
+    <div class="text-center animate-fadeIn" style="animation-delay: 0.9s;">
+      <a href="index.html" class="back-link inline-flex items-center gap-2 text-green-700 hover:text-green-800 font-semibold text-lg">
+        <span class="text-2xl">←</span>
+        Back to Home
+      </a>
     </div>
   </main>
 
-  <footer class="bg-gray-100 text-center py-6 mt-10 border-t">
-    <p>&copy; 2025 ilhamLabs-AI. All rights reserved.</p>
+  <footer class="bg-gray-100 text-center py-8 mt-12 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-gray-600 mb-2">&copy; 2025 ilhamLabs-AI. All rights reserved.</p>
+      <p class="text-sm text-gray-500">Privacy-first • Secure • Trusted by the Muslim community</p>
+    </div>
   </footer>
 </body>
 </html>
